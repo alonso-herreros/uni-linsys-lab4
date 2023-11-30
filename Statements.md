@@ -47,9 +47,11 @@ result.
 
 ### [Exercise 1][i1]: Direct DFT via FFT
 The DFT is given by the following expression:
+
 $$
 \hat{x}\left[k\right] = \sum_{n=0}^{N-1} x\left[n\right] e^{-j\frac{2\pi}{N}kn}, k=0, \dots, N-1
 $$
+
 In this practice we will calculate the DFT by means of the FFT algorithm. To this end, we will use the
 fft function of Matlab. You just have to specify the signal you wish to transform and the number of
 points . The Matlab function fft then calculates the transform for frequencies from 0 to 1. It is
@@ -107,10 +109,12 @@ end
 ## 3. Circular Convolution
 
 The circular convolution of two sequences $x_1[\cdot]$ and $x_2[\cdot]$ can be computed as
+
 $$
 x_3\left[n\right] = \sum_{m=0}^{N-1} x_1\left[m\right]x_2\left[(n-m)_N\right] =
 \left(x_1 \otimes x_2 \right)\left[n\right], n=0, \dots, N-1
 $$
+
 Alternatively, one can first compute the DFTs of $x_1[\cdot]$ and $x_2[\cdot]$, multiply them sample
 by sample, and compute the inverse DFT of the result.
 
@@ -143,10 +147,13 @@ circular convolutions.
 ### [Exercise 5][i5]: Comparison with linear convolution
 Now consider the sequences: $x1[\cdot] = [1, 2, 2, 1]$ and $x2[\cdot] = [1, -1, -1, 1]$. Calculate the
 value of $N$ for which the circular convolution
+
 $$
 x5[n] = \left(x3 \otimes x4\right)\left[n\right], n = 0, \dots , N-1
 $$
+
 is equal to the linear convolution
+
 $$
 x5[n] = \left(x3 \ast x4\right)\left[n\right], n = 0, \dots , N-1
 $$
