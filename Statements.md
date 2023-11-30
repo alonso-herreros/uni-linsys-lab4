@@ -79,7 +79,7 @@ domain correspond to the originals.
 ## 2. Zero Padding
 
 One of the parameters that affects the behavior of the DFT is the number of points $N$ with which it is
-calculated. If we have a sequence $x[\cdot]$ of length $L(L<N)$, we can increase the length of
+calculated. If we have a sequence $x[\cdot]$ of length $L(L\lt N)$, we can increase the length of
 the DFT by adding $N-L$ additional zeros. This is referred to as _zero padding_. If we interpret the DFT
 as a sampled version of the Fourier Transform of $x[\cdot]$ with $N$ points (in each period), increasing
 the number of points of the DFT results in a finer sampling of the Fourier Transform.
