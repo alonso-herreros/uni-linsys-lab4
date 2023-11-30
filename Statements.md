@@ -45,7 +45,7 @@ in many cases, the most efficient procedure for calculating a convolution betwee
 sequences is to calculate their respective FFTs, multiply them, and calculate the inverse FFT of the
 result.
 
-### Exercise 1: Direct DFT via FFT
+### [Exercise 1][i1]: Direct DFT via FFT
 The DFT is given by the following expression:
 $$
 \hat{x}\left[k\right] = \sum_{n=0}^{N-1} x\left[n\right] e^{-j\frac{2\pi}{N}kn}, k=0, \dots, N-1
@@ -67,7 +67,7 @@ Draw the four signals in the same figure (Figure 1) using the `subplot` function
 of the corresponding four DFTs in another figure (Figure 2). Modify the value of $N$, say, choose $N=50$
 and $N=100$, and see how this affects the DFTs. Explain what you see.
 
-### Exercise 2: Reverse DFT using IFFT
+### [Exercise 2][i2]: Reverse DFT using IFFT
 To calculate the reverse DFT (or inverse DFT), make use of the `ifft` function of Matlab. Again, you can
 use the `help` functionality of Matlab to understand how the function works and consider using the
 `ifftshift` function. Use these functions to compute the reverse DFTs of the DFTs calculated in
@@ -82,7 +82,7 @@ the DFT by adding $N-L$ additional zeros. This is referred to as _zero padding_.
 as a sampled version of the Fourier Transform of $x[\cdot]$ with $N$ points (in each period), increasing
 the number of points of the DFT results in a finer sampling of the Fourier Transform.
 
-### Exercise 3: Inserting Zeros
+### [Exercise 3][i3]: Inserting Zeros
 To demonstrate the effects of zero padding, implement a Matlab function that does the following:
 
 1. Define a signal $x[\cdot]$ of length $N$ and store it in the form of a row vector $(1 \times N)$.
@@ -114,7 +114,7 @@ $$
 Alternatively, one can first compute the DFTs of $x_1[\cdot]$ and $x_2[\cdot]$, multiply them sample
 by sample, and compute the inverse DFT of the result.
 
-### Exercise 4: Circular convolution
+### [Exercise 4][i4]: Circular convolution
 Implement a Matlab function that performs the circular convolution of two sequences. The format of
 the function is the following:
 
@@ -140,7 +140,7 @@ circular convolutions, calculated both directly in the time domain and indirectl
 signals’ DFTs. Compare the resulting
 circular convolutions.
 
-### Exercise 5: Comparison with linear convolution
+### [Exercise 5][i5]: Comparison with linear convolution
 Now consider the sequences: $x1[\cdot] = [1, 2, 2, 1]$ and $x2[\cdot] = [1, -1, -1, 1]$. Calculate the
 value of $N$ for which the circular convolution
 $$
@@ -152,3 +152,7 @@ x5[n] = \left(x3 \ast x4\right)\left[n\right], n = 0, \dots , N-1
 $$
 
 [i1]: https://github.com/alonso-herreros/uni-linsys-lab4/issues/1
+[i2]: https://github.com/alonso-herreros/uni-linsys-lab4/issues/2
+[i3]: https://github.com/alonso-herreros/uni-linsys-lab4/issues/3
+[i4]: https://github.com/alonso-herreros/uni-linsys-lab4/issues/4
+[i5]: https://github.com/alonso-herreros/uni-linsys-lab4/issues/5
